@@ -1,0 +1,17 @@
+-- HackerRank: Weather Observation Station 5
+-- Difficulty: Easy
+-- Topic: MIN, MAX, LENGTH, ORDER BY
+
+(
+    SELECT CITY, LENGTH(CITY)
+    FROM STATION
+    ORDER BY LENGTH(CITY), CITY
+    LIMIT 1
+)
+UNION
+(
+    SELECT CITY, LENGTH(CITY)
+    FROM STATION
+    ORDER BY LENGTH(CITY) DESC, CITY
+    LIMIT 1
+);
